@@ -112,13 +112,11 @@ form button:hover {
 }
 
 
-
-
-/* ================= MOBILE VIEW ================= */
+  /* ================= MOBILE VIEW (FIXED) ================= */
 @media (max-width: 600px) {
 
     .container {
-        margin: 100px;
+        margin: 20px 10px;
         padding: 15px;
     }
 
@@ -128,28 +126,36 @@ form button:hover {
 
     form {
         flex-direction: column;
-        gap: 8px;
+        gap: 10px;
     }
 
     form input,
     form select,
     form button {
-        width: 100%;
+        width: 90%; 
         font-size: 14px;
     }
 
+    .expense-table {
+        overflow-x: auto;   
+    }
+
     .expense-table table {
+        width: 100%;       
+        min-width: 500px;   
         font-size: 12px;
     }
 
     .expense-table th,
     .expense-table td {
-        padding: 6px;
+        padding: 8px;
+        text-align: center;
     }
 
     .total-amount {
         font-size: 16px;
         text-align: center;
+        margin-top: 10px;
     }
 
     .filter {
@@ -157,13 +163,15 @@ form button:hover {
     }
 
     .edit-delete-btns {
-        flex-direction: column;
-        gap: 5px;
+        display: flex;
+        flex-direction: column; 
+        /* column-gap: 5px; */
     }
 
-    .edit-btn, .delete-btn {
+    .edit-btn,
+    .delete-btn {
+        width: 80%;
         margin-left: 0;
-        width: 100%;
         font-size: 12px;
     }
 }
@@ -202,7 +210,7 @@ form button:hover {
     .total-amount {
         font-size: 17px;
     }
-
+    
     .edit-btn, .delete-btn {
         font-size: 13px;
         padding: 6px 12px;
